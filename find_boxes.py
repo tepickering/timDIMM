@@ -16,7 +16,7 @@ def rfits(file):
 def daofind(im):
     mean = np.mean(im)
     sig = np.std(im)
-    smooth = nd.gaussian_filter(im, 1.5)
+    smooth = nd.gaussian_filter(im, 1.4)
     clip = smooth >= (mean + 5.0)
     labels, num = nd.label(clip)
     pos = nd.center_of_mass(im, labels, range(num + 1))
