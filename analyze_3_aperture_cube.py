@@ -81,7 +81,7 @@ for im in cube[:, ymin:ymax, xmin:xmax]:
     else:
         nfailed += 1
 print "Failed to find right spots in %d images." % nfailed
-SS = np.array(spots)
+SS = np.array(spots, dtype=[('y', float), ('x', float)])
 
 """
 Define a function to measure the distance between two spots for all
